@@ -180,18 +180,12 @@ img {
 
 
 /* SITENAV */
-.sitenav {
-}
-
 .sitenav-list {
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.sitenav-item {
 }
 
 .sitenav-item:not(:last-child) {
@@ -221,9 +215,6 @@ img {
 
 
 /* HERO */
-.hero {
-}
-
 .hero-container {
     display: flex;
     padding-left: 0;
