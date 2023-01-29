@@ -111,6 +111,7 @@ img {
 }
 
 .site-header-logo-link {
+    flex-shrink: 0;
     display: flex;
     text-decoration: none;
 }
@@ -158,6 +159,7 @@ img {
     color: var(--text-color);
     text-transform: uppercase;
     text-decoration: none;
+    white-space: nowrap;
     transition: color 0.3s ease;
 }
 
