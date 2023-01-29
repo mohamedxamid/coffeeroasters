@@ -36,6 +36,7 @@
     --accent-color-light-brown-80: rgba(201, 155, 103, 0.8);
     --accent-color-light-brown-60: rgba(201, 155, 102, 0.6);
     --light-brown: #f3d7b7;
+    --light-bg: #f8f8f2;
     --text-color: #333;
     --outline-color: var(--accent-color-green);
     --black: #000;
@@ -136,6 +137,8 @@ img {
 /* MAIN CONTENT */
 .main-content {
     flex-grow: 1;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 
@@ -262,6 +265,76 @@ img {
 }
 
 
+/* INDEX-COLLETION */
+.collections {
+}
+
+.index-collection-inner {
+    padding: 50px 143px;
+    background-color: var(--light-bg);
+    background-image: url("../images/index-collection-bg.jpg");
+}
+
+.index-collection-heading {
+    margin-top: 0;
+    margin-bottom: 80px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: normal;
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.index-collection-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.index-collection-item {
+    display: flex;
+    align-items: center;
+}
+
+.index-collection-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.index-collection-img {
+    flex-shrink: 0;
+    display: block;
+    width: 450px;
+    height: 375px;
+    object-fit: cover;
+}
+
+.index-collection-info {
+    flex-grow: 1;
+    padding-left: 117px;
+    padding-right: 117px;
+}
+
+.index-collection-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 58px;
+    line-height: normal;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+.index-collection-text {
+    margin: 0;
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.index-collection-text:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
 /* RETINA BG */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -272,5 +345,9 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
     .site-header-hero-wrapper {
         background-image: url("../images/site-header-intro-bg@2x.jpg");
+    }
+
+    .index-collection-inner {
+        background-image: url("../images/index-collection-bg@2x.jpg");
     }
 }
