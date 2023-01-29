@@ -29,8 +29,13 @@
 
 /* CUSTOM PROPS */
 :root {
-    --accent-color: #f3d7b7;
     --accent-color-green: #0a775f;
+    --accent-color-green-80: rgba(10, 119, 95, 0.8);
+    --accent-color-green-60: rgba(10, 119, 95, 0.6);
+    --accent-color-light-brown: #c99b67;
+    --accent-color-light-brown-80: rgba(201, 155, 103, 0.8);
+    --accent-color-light-brown-60: rgba(201, 155, 102, 0.6);
+    --light-brown: #f3d7b7;
     --text-color: #333;
     --outline-color: var(--accent-color-green);
     --black: #000;
@@ -86,6 +91,48 @@ img {
 }
 
 
+/* BUTTON */
+.button {
+    display: inline-block;
+    padding: 16px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.button-green {
+    color: var(--white);
+    background-color: var(--accent-color-green);
+}
+
+.button-green:hover {
+    background-color: var(--accent-color-green-80);
+}
+
+.button-green:active {
+    background-color: var(--accent-color-green-60);
+}
+
+.button-brown {
+    color: var(--white);
+    background-color: var(--accent-color-light-brown);
+}
+
+.button-brown:hover {
+    background-color: var(--accent-color-light-brown-80)
+}
+
+.button-brown:active {
+    background-color: var(--accent-color-light-brown-60)
+}
+
+
 /* MAIN CONTENT */
 .main-content {
     flex-grow: 1;
@@ -94,6 +141,7 @@ img {
 
 /* SITE-HEADER */
 .site-header-hero-wrapper {
+    background-color: var(--light-brown);
     background-image: url("../images/site-header-intro-bg.jpg");
 }
 
@@ -171,6 +219,56 @@ img {
     opacity: 0.6;
 }
 
+
+/* HERO */
+.hero {
+}
+
+.hero-container {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero-info-wrapper {
+    width: 100%;
+    max-width: 730px;
+    padding-top: 106px;
+    padding-right: 116px;
+    padding-bottom: 100px;
+    padding-left: 150px;
+}
+
+.hero-heading {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: normal;
+    color: var(--black);
+}
+
+.hero-text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--black);
+}
+
+.hero-text:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+.hero-img {
+    display: block;
+    width: 710px;
+    height: 596px;
+    object-fit: contain;
+}
+
+.hero-img-index {
+    height: 696px;
+}
 
 
 /* RETINA BG */
