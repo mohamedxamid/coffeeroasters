@@ -208,6 +208,11 @@ img {
     transition: color 0.3s ease;
 }
 
+.sitenav-medium-font .sitenav-link {
+    font-size: 16px;
+    line-height: normal;
+}
+
 .sitenav-link:hover {
     color: var(--accent-color-green);
 }
@@ -496,6 +501,58 @@ img {
 }
 
 
+/* SITE-FOOTER */
+.site-footer {
+    background-color: var(--light-brown);
+    background-image: url("../images/site-header-intro-bg.jpg");
+}
+
+.site-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 65px 60px;
+}
+
+.site-footer-socials {
+
+}
+
+/* SOCIALS */
+.socials {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.socials-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.socials-link {
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.socials-link:hover {
+    color: var(--accent-color-green);
+}
+
+.socials-link:active {
+    color: var(--accent-color-green-60);
+}
+
+.socials-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
 /* RETINA BG */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -518,5 +575,9 @@ only screen and (                min-resolution: 2dppx) {
 
     .how-it-works-inner {
         background-image: url("../images/green-bg@2x.jpg");
+    }
+
+    .site-footer {
+        background-image: url("../images/site-header-intro-bg@2x.jpg");
     }
 }
