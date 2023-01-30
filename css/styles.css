@@ -161,21 +161,21 @@ img {
     padding-right: 50px;
 }
 
-.site-header-logo-link {
+.site-logo-link {
     flex-shrink: 0;
     display: flex;
     text-decoration: none;
 }
 
-.site-header-logo-link:hover {
+.site-logo-link:hover {
     opacity: 0.8;
 }
 
-.site-header-logo-link:active {
+.site-logo-link:active {
     opacity: 0.6;
 }
 
-.site-header-logo-img {
+.site-logo-img {
     width: 235px;
     height: 24px;
     object-fit: contain;
