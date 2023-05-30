@@ -63,6 +63,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.75;
@@ -258,6 +259,17 @@ img {
     margin-bottom: 34px;
 }
 
+.hero-img-wrapper {
+    position: relative;
+}
+
+.hero-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
 .hero-img {
     display: block;
     width: 710px;
@@ -276,6 +288,7 @@ img {
 }
 
 .index-collection-inner {
+    position: relative;
     padding: 50px 143px;
     background-color: var(--light-bg);
     background-image: url("../images/index-collection-bg.jpg");
@@ -290,6 +303,25 @@ img {
     text-align: center;
     color: var(--black);
     text-transform: uppercase;
+}
+
+.leaves-badge {
+    position: absolute;
+}
+
+.leaves-left-mix {
+    top: 0;
+    left: -258px;
+}
+
+.leaves-right-mix {
+    top: 685px;
+    right: -330px;
+}
+
+.leaves-left-light {
+    top: 1263px;
+    left: -216px;
 }
 
 .index-collection-list {
@@ -347,6 +379,7 @@ img {
 }
 
 .index-features-inner {
+    position: relative;
     padding: 50px 30px;
     background-image: url("../images/index-features-bg.jpg");
     background-size: 100% 700px;
@@ -362,6 +395,12 @@ img {
     text-align: center;
     color: var(--white);
     text-transform: uppercase;
+}
+
+.index-features-badge {
+    position: absolute;
+    top: 233px;
+    left: -20px;
 }
 
 .index-features-lead {
@@ -418,6 +457,7 @@ img {
 
 /* HOW-IT-WORKS */
 .how-it-works-inner {
+    position: relative;
     padding: 50px 30px;
     background-color: var(--accent-color-green);
     background-image: url("../images/green-bg.jpg");
@@ -434,6 +474,12 @@ img {
     text-transform: uppercase;
 }
 
+.how-it-works-badge {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+}
+
 .how-it-works-list {
     display: flex;
     margin: 0;
@@ -446,6 +492,7 @@ img {
 }
 
 .how-it-works-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: calc(100% / 3 - 20px);
@@ -454,12 +501,24 @@ img {
 }
 
 .how-it-works-item::before {
+    z-index: 2;
     content: "";
     width: 60px;
     height: 60px;
     margin-bottom: 20px;
     border: 4px solid var(--accent-color-light-brown);
     background-color: var(--light-bg);
+}
+
+.how-it-works-item:not(:last-child):after {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    width: 433px;
+    height: 3px;
+    background-image: url("../images/brown-dashed-stroke.svg");
+    background-repeat: no-repeat;
+    content: "";
 }
 
 .how-it-works-info {
