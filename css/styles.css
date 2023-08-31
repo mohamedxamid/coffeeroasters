@@ -2,7 +2,7 @@
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
-        url("../fonts/Roboto-Regular.woff") format("woff");
+    url("../fonts/Roboto-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -11,7 +11,7 @@
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
-        url("../fonts/Roboto-Bold.woff") format("woff");
+    url("../fonts/Roboto-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -20,7 +20,7 @@
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
-        url("../fonts/Roboto-Medium.woff") format("woff");
+    url("../fonts/Roboto-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -101,6 +101,7 @@ img {
     font-size: 16px;
     line-height: normal;
     letter-spacing: 1px;
+    border: none;
     border-radius: 100px;
     text-transform: uppercase;
     text-decoration: none;
@@ -152,6 +153,7 @@ img {
 .site-header {
     padding-top: 45px;
     padding-bottom: 45px;
+    position: relative;
 }
 
 .site-header-container {
@@ -220,6 +222,10 @@ img {
 
 .sitenav-link:active {
     opacity: 0.6;
+}
+
+.site-header__sitenav-toggler {
+    display: none;
 }
 
 
@@ -623,20 +629,116 @@ only screen and (                min-resolution: 2dppx) {
     .site-header-hero-wrapper {
         background-image: url("../images/site-header-intro-bg@2x.jpg");
     }
-
+    
     .index-collection-inner {
         background-image: url("../images/index-collection-bg@2x.jpg");
     }
-
+    
     .index-features-inner {
         background-image: url("../images/index-features-bg@2x.jpg");
     }
-
+    
     .how-it-works-inner {
         background-image: url("../images/green-bg@2x.jpg");
     }
-
+    
     .site-footer {
         background-image: url("../images/site-header-intro-bg@2x.jpg");
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .site-header__sitenav {
+        display: none;
+    }
+
+    .site-header--active .site-header__sitenav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 25px 50px;
+        background-color: var(--accent-color-light-brown);
+        display: block;
+    }
+
+    .site-header__sitenav .sitenav-list {
+        justify-content: flex-end;
+    }
+    
+    .site-header__logo-link {
+        margin-right: 36px;
+    }
+    
+    .site-header__sitenav-toggler {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        display: block;
+        background-color: transparent;
+        z-index: 3;
+    }
+    
+    .site-header__sitenav-toggler span,
+    .site-header__sitenav-toggler span::before,
+    .site-header__sitenav-toggler span::after {
+        position: absolute;
+        top: 50%; margin-top: -1px;
+        left: 50%;  margin-left: -10px;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+    }
+    
+    .site-header__sitenav-toggler span::before,
+    .site-header__sitenav-toggler span::after {
+        display: block;
+        content: "";
+        transition: 0.3s;
+    }
+    
+    .site-header__sitenav-toggler span::before {
+        transform: translateY(-5px)
+    }
+    .site-header__sitenav-toggler span::after {
+        transform: translateY(5px)
+    }
+
+    .site-header__sitenav-toggler--active span {
+        height: 0;
+    }
+
+    .site-header__sitenav-toggler--active span::before {
+        transform: rotate(45deg);
+    }
+
+    .site-header__sitenav-toggler--active span::after {
+        transform: rotate(-45deg);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .site-header-container {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    
+    .site-header__logo-link {
+        width: 70%;
+    }
+
+    .site-header--active .site-header__sitenav {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .site-header__sitenav .sitenav-list {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .sitenav-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 16px;
     }
 }
