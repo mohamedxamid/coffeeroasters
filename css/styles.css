@@ -400,14 +400,9 @@ img {
     text-transform: uppercase;
 }
 
-.index-features-badge {
-    position: absolute;
-    top: 233px;
-    left: -20px;
-}
 
 .index-features-lead {
-    width: 580px;
+    max-width: 580px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -419,8 +414,9 @@ img {
 }
 
 .index-features-list {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -431,12 +427,11 @@ img {
 .index-features-item {
     width: calc(100% / 3 - 20px);
     margin-left: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 36px;
 }
 
 .index-features-img {
     width: 433px;
-    height: 500px;
     margin-bottom: 28px;
     object-fit: contain;
 }
@@ -455,6 +450,13 @@ img {
     padding-right: 56px;
     font-size: 18px;
     line-height: 28px;
+}
+
+.index-features-badge {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    transform: translate(-50%, -40%);
 }
 
 
@@ -708,6 +710,15 @@ only screen and (                min-resolution: 2dppx) {
     .leaves-left-light {
         right: calc(50% + 330px);
     }
+
+    .index-features-inner {
+        background-size: 100% 100%;
+    }
+
+    .index-features-list {
+        flex-wrap: wrap;
+        position: relative;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -726,6 +737,10 @@ only screen and (                min-resolution: 2dppx) {
     .index-collection-info {
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .index-features-item {
+        width: calc(100% / 2 - 20px);
     }
 }
 
@@ -844,6 +859,15 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .index-features-item {
+        width: calc(100% / 1 - 20px);
+    }
+    .index-features-img {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .index-collection__container {
         padding-left: 0;
@@ -858,6 +882,15 @@ only screen and (                min-resolution: 2dppx) {
     .index-collection-info {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .index-features__container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .index-features-badge {
+        transform: translate(-15%, -40%);
     }
 }
 
@@ -909,5 +942,13 @@ only screen and (                min-resolution: 2dppx) {
 
     .index-collection-title {
         font-size: 45px;
+    }
+
+    .index-features-heading {
+        font-size: 40px;
+    }
+
+    .index-features-badge {
+        max-width: 50%;
     }
 }
