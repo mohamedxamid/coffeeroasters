@@ -491,7 +491,7 @@ img {
     margin: 0;
     padding: 0;
     margin-left: -20px;
-    margin-bottom: 60px;
+    margin-bottom: 24px;
     list-style: none;
     text-align: left;
     counter-reset: how-it-works;
@@ -503,6 +503,7 @@ img {
     flex-direction: column;
     width: calc(100% / 3 - 20px);
     margin-left: 20px;
+    margin-bottom: 36px;
     counter-increment: how-it-works;
 }
 
@@ -720,6 +721,14 @@ only screen and (                min-resolution: 2dppx) {
         flex-wrap: wrap;
         position: relative;
     }
+
+    .how-it-works-item-title {
+        font-size: 36px;
+    }
+
+    .how-it-works-text {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -742,6 +751,28 @@ only screen and (                min-resolution: 2dppx) {
 
     .index-features-item {
         width: calc(100% / 2 - 20px);
+    }
+
+    .how-it-works-list {
+        flex-wrap: wrap;
+    }
+
+    .how-it-works-item {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .how-it-works-item::before {
+        content: none;
+    }
+
+    .how-it-works-item:not(:last-child):after {
+        content: none;
+    }
+
+    .how-it-works-badge {
+        max-width: 22%;
+        top: 50px;
+        right: 0px;
     }
 }
 
@@ -867,6 +898,14 @@ only screen and (                min-resolution: 2dppx) {
     .index-features-img {
         width: 100%;
     }
+
+    .how-it-works-item {
+        width: calc(100% / 1 - 20px);
+    }
+
+    .how-it-works-badge {
+        top: 80px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -892,6 +931,11 @@ only screen and (                min-resolution: 2dppx) {
 
     .index-features-badge {
         transform: translate(-15%, -40%);
+    }
+
+    .how-it-works__container {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -951,5 +995,17 @@ only screen and (                min-resolution: 2dppx) {
 
     .index-features-badge {
         max-width: 50%;
+    }
+
+    .how-it-works-list {
+        position: relative;
+    }
+
+    .how-it-works-badge {
+        max-width: 45%;
+        top: 0;
+        right: 0;
+        transform: translateY(-80%) translateX(20%);
+        z-index: 5;
     }
 }
