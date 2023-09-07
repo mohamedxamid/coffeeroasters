@@ -288,6 +288,7 @@ img {
 /* INDEX-COLLETION */
 .index-collection {
     margin-bottom: 20px;
+    overflow-x: hidden;
 }
 
 .index-collection-inner {
